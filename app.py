@@ -27,7 +27,7 @@ def home():
 def login():
     error = None
     if request.method == 'POST':
-        if validateEmail(request.form['email']) != False and request.form['email'] and request.form['myPassword'] is not "":
+        if validateEmail(request.form['email']) != False and request.form['email'] and request.form['myPassword'] != "":
             return redirect(url_for('home'))
         else:
             error = "You have entered invalid credentials. Please try again."

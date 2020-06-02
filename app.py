@@ -14,8 +14,6 @@ def validateEmail(email):
         return False
 
 
-# I used r' for the pattern to be raw format.
-
 # home decorator
 @app.route("/")
 def home():

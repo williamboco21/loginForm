@@ -15,13 +15,13 @@ def validateEmail(email):
 
 
 # home decorator
-@app.route("/")
+@app.route("/home")
 def home():
     return render_template('success.html')
 
 
 # using decorators to link the function to a URL
-@app.route("/login", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
